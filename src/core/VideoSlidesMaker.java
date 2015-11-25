@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VideoSlidesMaker implements SlidesMaker {
+public class VideoSlidesMaker extends AbstractSlidesMaker {
     private final Video video;
 
     public VideoSlidesMaker(Video video) {

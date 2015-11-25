@@ -4,20 +4,15 @@ import javafx.scene.image.Image;
 
 import java.util.List;
 
-public class RotateFilter implements SlidesMaker{
-    private List<Image> slides;
-    private SlidesMaker maker;
-    public RotateFilter(List<Image> slides) {
-        this.slides = slides;
-    }
-    public RotateFilter(SlidesMaker maker){
+public class RotateFilter extends AbstractSlidesMaker {
+    RotateFilter(AbstractSlidesMaker maker) {
         this.maker = maker;
     }
 
     @Override
     public List<Image> doSlides() {
-        slides = maker.doSlides();
-        System.out.println("+RotateFilter");
+        List<Image> slides = maker.doSlides();
+        System.out.println("AddRotate");
         return slides;
     }
 }
