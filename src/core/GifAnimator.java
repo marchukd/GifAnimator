@@ -1,7 +1,7 @@
 package core;
 
 final public class GifAnimator {
-    void makeGif(AbstractSlidesMaker maker) {
+    void makeGif(SlidesMaker maker) {
         maker.doSlides();
     }
 
