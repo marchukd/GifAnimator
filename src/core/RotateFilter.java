@@ -1,7 +1,5 @@
 package core;
 
-import javafx.scene.image.Image;
-
 import java.util.List;
 
 public class RotateFilter extends AbstractSlidesMaker {
@@ -10,9 +8,11 @@ public class RotateFilter extends AbstractSlidesMaker {
     }
 
     @Override
-    public List<Image> doSlides() {
-        List<Image> slides = maker.doSlides();
-        System.out.println("AddRotate");
+    public List<core.Image> doSlides() {
+        super.doSlides();
+        for (int i = 0; i < slides.size(); i++) {
+            slides.get(i).title += " +AddRotate90dgr";
+        }
         return slides;
     }
 }

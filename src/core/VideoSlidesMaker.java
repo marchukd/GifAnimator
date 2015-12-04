@@ -1,7 +1,5 @@
 package core;
 
-import javafx.scene.image.Image;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +16,10 @@ public class VideoSlidesMaker extends AbstractSlidesMaker {
     }
 
     private List<Image> generateSlidesFromVideo() {
-        return new ArrayList<>();
+        List<Image> slides = new ArrayList<>();
+        slides.add(new Image("Image 1"));
+        slides.add(new Image("Image 2"));
+        slides.add(new Image("Image 3"));
+        return slides;
     }
 }

@@ -1,6 +1,5 @@
 package core;
 
-import javafx.scene.image.Image;
 
 import java.util.List;
 
@@ -10,9 +9,11 @@ public class LightFilter extends AbstractSlidesMaker {
     }
 
     @Override
-    public List<Image> doSlides() {
-        List<Image> slides = maker.doSlides();
-        System.out.println("AddLightFilter");
+    public List<core.Image> doSlides() {
+        super.doSlides();
+        for (int i = 0; i < slides.size(); i++) {
+            slides.get(i).title += " +AddLightFilter";
+        }
         return slides;
     }
 }
