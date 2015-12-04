@@ -5,9 +5,10 @@ import javafx.scene.image.Image;
 import java.util.List;
 
 public class LightFilter extends AbstractSlidesMaker {
-    LightFilter(AbstractSlidesMaker maker){
-        this.maker = maker;
+    LightFilter(AbstractSlidesMaker maker) {
+        super(maker);
     }
+
     @Override
     public List<Image> doSlides() {
         List<Image> slides = maker.doSlides();

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class RotateFilter extends AbstractSlidesMaker {
     RotateFilter(AbstractSlidesMaker maker) {
-        this.maker = maker;
+        super(maker);
     }
 
     @Override
